@@ -96,9 +96,8 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
 
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- Twitter: [@tu-usuario](https://twitter.com/tu-usuario)
-- Email: tu-email@ejemplo.com
+- GitHub: [@efe13](https://github.com/efe13dev)
+- Email: efe13dev@gmail.com
 
 ---
 
