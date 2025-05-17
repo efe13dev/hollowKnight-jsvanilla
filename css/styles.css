@@ -212,10 +212,10 @@ img {
 .hero-image {
     position: absolute;
     right: 5%;
-    bottom: 0;
+    bottom: 5%;
     max-width: 15%;
     animation: float 6s ease-in-out infinite;
-    filter: brightness(0.8);
+    filter: brightness(0.9);
 }
 
 @keyframes float {
@@ -384,7 +384,7 @@ img {
 
 /* Characters Section */
 .characters {
-    padding: 8rem 2rem;
+    padding: rem 2rem;
     background-color: var(--background-dark);
 }
 
