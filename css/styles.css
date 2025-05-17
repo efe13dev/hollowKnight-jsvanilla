@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+   
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -168,6 +170,7 @@ img {
     margin: 5px 0;
     transition: var(--transition);
 }
+
 
 /* Hero Section */
 .hero {
@@ -381,7 +384,7 @@ img {
 
 /* Characters Section */
 .characters {
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
     background-color: var(--background-dark);
 }
 

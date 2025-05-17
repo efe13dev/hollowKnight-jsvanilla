@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Desplazamiento suave al elemento objetivo
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Ajuste para el header fijo
+                        top: targetElement.offsetTop + 40, // Ajuste aumentado para dejar más espacio arriba
                         behavior: 'smooth'
                     });
                 }
