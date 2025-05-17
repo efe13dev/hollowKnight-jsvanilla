@@ -207,6 +207,7 @@ img {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 .hero p {
@@ -331,7 +332,7 @@ img {
     position: relative;
     padding-left: 0.8rem;
     color: rgba(255, 255, 255, 0.9);
-    text-align: justify;
+    text-wrap: pretty;
 }
 
 .story-text p:last-child {
@@ -465,6 +466,7 @@ img {
 .character-info p {
     color: var(--text-secondary);
     font-size: 0.95rem;
+    text-wrap: pretty;
 }
 
 /* Footer */
