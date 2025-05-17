@@ -404,6 +404,25 @@ img {
     scroll-margin-top: 100px; /* Asegura espacio adicional al hacer scroll */
 }
 
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.jump-animation {
+    animation: jump 0.5s ease;
+}
+
+.nav-cloth {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-cloth:hover {
+    transform: scale(1.1);
+}
+
 /* Asegurar que el título tenga espacio extra */
 .characters h2 {
     margin-top: 2rem;

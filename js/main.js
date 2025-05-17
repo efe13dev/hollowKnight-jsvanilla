@@ -1,5 +1,20 @@
-// Esperar a que el DOM esté completamente cargado
+// Animación de salto para la imagen de Cloth
 document.addEventListener('DOMContentLoaded', function() {
+    const clothImage = document.getElementById('cloth-image');
+    
+    if (clothImage) {
+        clothImage.addEventListener('click', function() {
+            // Añade la clase de animación
+            this.classList.add('jump-animation');
+            
+            // Elimina la clase después de que termine la animación
+            this.addEventListener('animationend', function() {
+                this.classList.remove('jump-animation');
+            }, { once: true });
+        });
+    }
+
+    // Código existente
     // Actualizar el año en el footer automáticamente
     const yearSpan = document.getElementById('footer-year');
     if (yearSpan) {
