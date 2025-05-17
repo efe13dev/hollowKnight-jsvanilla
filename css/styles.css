@@ -106,7 +106,7 @@ img {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,9 +121,22 @@ img {
     font-weight: 700;
 }
 
-.logo img {
-    height: 40px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo .nav-cloth {
+    height: 50px;
     width: auto;
+}
+
+.logo .nav-logo {
+    height: 50px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -216,6 +229,7 @@ img {
     max-width: 15%;
     animation: float 6s ease-in-out infinite;
     filter: brightness(0.9);
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.2));
 }
 
 @keyframes float {
@@ -384,8 +398,14 @@ img {
 
 /* Characters Section */
 .characters {
-    padding: rem 2rem;
+    padding: 6rem 2rem; /* Aumentado el padding superior para más espacio */
     background-color: var(--background-dark);
+    scroll-margin-top: 100px; /* Asegura espacio adicional al hacer scroll */
+}
+
+/* Asegurar que el título tenga espacio extra */
+.characters h2 {
+    margin-top: 2rem;
 }
 
 .characters h2 {
