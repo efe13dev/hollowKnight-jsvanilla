@@ -1,5 +1,29 @@
-// Animación de salto para la imagen de Cloth
+// Animación de salto para la imagen de Cloth y animación flotante para shadow
 document.addEventListener('DOMContentLoaded', function() {
+    // Efecto de fade in para la imagen shadow
+    const shadowImage = document.querySelector('.story-image img[src*="shadow"]');
+    
+    if (shadowImage) {
+        // Esperar a que la página esté completamente cargada
+        window.addEventListener('load', function() {
+            // Pequeño retraso para asegurar que todo esté listo
+            setTimeout(function() {
+                // Hacer visible la imagen con transición
+                shadowImage.style.opacity = '1';
+            }, 4000);
+        });
+        
+        // Efecto al pasar el ratón
+        shadowImage.style.cursor = 'pointer';
+        shadowImage.addEventListener('mouseenter', function() {
+            this.style.filter = 'drop-shadow(0 0 30px rgba(255, 255, 255, 0.8))';
+        });
+        
+        shadowImage.addEventListener('mouseleave', function() {
+            this.style.filter = 'drop-shadow(0 2px 5px rgba(255, 255, 255, 0.2))';
+        });
+    }
+    
     const clothImage = document.getElementById('cloth-image');
     
     if (clothImage) {
