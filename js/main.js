@@ -22,6 +22,29 @@ document.addEventListener('DOMContentLoaded', function() {
         shadowImage.addEventListener('mouseleave', function() {
             this.style.filter = 'drop-shadow(0 2px 5px rgba(255, 255, 255, 0.2))';
         });
+
+        // Abrir modal al hacer click en la sombra
+        shadowImage.addEventListener('click', function() {
+            const modal = document.getElementById('shadow-modal');
+            if (modal) {
+                modal.classList.add('active');
+            }
+        });
+    }
+
+    // Cerrar modal al hacer click en la X o fuera del contenido
+    const modal = document.getElementById('shadow-modal');
+    const closeModalBtn = document.getElementById('close-shadow-modal');
+    if (modal && closeModalBtn) {
+        closeModalBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+        // Cerrar al hacer click fuera del contenido
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
     }
     
     const clothImage = document.getElementById('cloth-image');

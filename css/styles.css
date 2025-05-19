@@ -398,6 +398,60 @@ img {
     filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
 }
 
+/* Modal Sombra */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(10, 10, 20, 0.85);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 3s cubic-bezier(.4,2,.6,1.1);
+}
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 3s cubic-bezier(.4,2,.6,1.1);
+}
+.modal-content {
+    background: var(--background-light);
+    margin: 6% auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    max-width: 420px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+    color: var(--text-color);
+    position: relative;
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(6px);
+    transition: opacity 1.2s cubic-bezier(.4,2,.6,1.1), transform 1.2s cubic-bezier(.4,2,.6,1.1), filter 1.2s cubic-bezier(.4,2,.6,1.1);
+}
+.modal.active .modal-content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 10;
+}
+.close-modal:hover {
+    color: #fff;
+}
+
 /* Characters Section */
 .characters {
     padding: 6rem 2rem; /* Aumentado el padding superior para más espacio */
